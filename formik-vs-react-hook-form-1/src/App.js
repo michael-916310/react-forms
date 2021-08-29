@@ -1,13 +1,14 @@
 import React, { Component } from "react";
-// import {LoginForm} from "./LoginFormFormik"
-import {LoginForm} from "./LoginFormReactHookForm"
+import {LoginForm as Formik} from "./LoginFormFormik"
+import {LoginForm as ReactHook} from "./LoginFormReactHookForm"
 
 class App extends Component {
   render() {
     return (
       <main>
         <section>
-          <LoginForm />
+          <Formik />
+          <ReactHook />
         </section>
       </main>
     );

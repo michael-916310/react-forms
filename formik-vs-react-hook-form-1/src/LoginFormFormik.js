@@ -10,7 +10,7 @@ export const LoginForm = () => {
       password: ''
     },
     validationSchema: Yup.object({
-      login: Yup.string().max(10, 'Login must be shorter than 10 characters').required('Required'),
+      login: Yup.string().max(10, 'Login must be shorter than 10 characters').required('super required'),
       password: Yup.string().min(6, 'Password should be longer than 6 characters').required()
     }),
     onSubmit: ({login, password}) => {
@@ -22,6 +22,7 @@ export const LoginForm = () => {
     <form onSubmit={handleSubmit}>
       <header>
         <img width="60" src={logIn} alt="log in" />
+        <p>FORMIK</p>
       </header>
       <label htmlFor="login">Login</label>
       <input

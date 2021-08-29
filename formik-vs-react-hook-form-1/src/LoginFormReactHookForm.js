@@ -20,6 +20,7 @@ export const LoginForm = () => {
     <form onSubmit={handleSubmit(onSubmit)}>
       <header>
         <img width="60" src={logIn} alt="log in" />
+        <p>REACT HOOK FORM</p>
       </header>
       <label htmlFor="login">Login</label>
       <input
@@ -28,7 +29,7 @@ export const LoginForm = () => {
         name="login"
         type="text"
       />
-      {errors.login && <div>{errors.login.message}</div>} 
+      {errors.login && <div>{errors.login.message}</div>}
       <label htmlFor="password">Password</label>
       <input
         ref={register}
@@ -36,7 +37,7 @@ export const LoginForm = () => {
         name="password"
         type="password"
       />
-      {errors.password && <div>{errors.password.message}</div>} 
+      {errors.password && <div>{errors.password.message}</div>}
       <button type="submit">Log in</button>
     </form>
   );
